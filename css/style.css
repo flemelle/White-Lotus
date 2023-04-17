@@ -1,0 +1,114 @@
+html
+{
+    background-color : black;
+    height : 100%;
+    font-size : 30px;
+    font-family: 'mypolice';
+    transition : 0.6s;
+    transition-timing-function: ease;
+}
+body{
+    margin : 0;
+    padding : 0;
+    display : flex;
+    overflow: hidden;
+    background-color : black;
+}
+canvas
+{
+    border : 1px solid black;
+    background-color : #000;
+    cursor : none;
+}
+@font-face {
+    font-family: 'mypolice';
+    src: url('font/Mina/Mina-Regular.ttf');
+}
+#intro
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    height : 100%;
+    width : 100%;
+    z-index : 10000;
+    position : absolute;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+#intro.hide
+{
+    display : none;
+    opacity : 0;
+    animation : fade 3s ease;
+    transition : 0.4s;
+}
+@keyframes fade 
+{
+    0%{
+        opacity : 50%;
+    }
+    15%{
+        opacity : 100%;
+    }
+    85%{
+        opacity : 100%;
+    }
+    100%{
+        opacity : 0%;
+    }
+}
+#message
+{
+    background-color: #fff;
+    height : 50%;
+    width : 50%;
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding : 80px;
+    border : 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 200%;
+
+}
+#intro:hover ~ #cursor
+{
+    background-color: #000;
+}
+#pond:hover ~ #cursor
+{
+    background-color: none;
+}
+#pond
+{
+    height : 100%;
+    width : 100%;
+}
+#slidecontainer
+{
+    bottom : 0;
+    width : 100%;
+    height : 10%;
+    position : fixed;
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color : rgb(206, 255, 253);
+    border-top: 2px solid #000;
+    display: none;
+}
+#slidecontainer #div
+{
+    width : 100%;
+    height : 100%;
+    position : fixed;
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#slidecontainer:hover ~ #cursor
+{
+    background-color: #000;
+}
